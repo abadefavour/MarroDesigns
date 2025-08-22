@@ -1,0 +1,411 @@
+
+/* General Styling remains the same */
+body {
+  background-color: #F8F8F8;
+  font-family: 'Georgia', serif;
+  color: #36454F; 
+  margin: 0;
+  padding: 0;
+ 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.custom-navbar{
+    background-color: #282d33;
+    
+  
+}
+
+.custom-navbar .nav-link {
+    color: white;
+    margin-left: 100px; 
+}
+
+.custom-navbar .nav-link:hover {
+    color: white; 
+    background-color: #D4AF37 ;
+    border-radius: 5px;
+    
+}
+
+.custom-navbar .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.custom-navbar.logo {
+    flex: 1;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+
+
+.hero-section{
+    /* background-image: url(/img/background15.jpg) ; */
+    background-image: linear-gradient(to right, #1f1e1de6, rgba(31, 30, 29, 0.329), rgba(58, 57, 54, 0.5), #2b2a294d, #faf9f600), url('../img/marrovick2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffff;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+ 
+
+}
+
+.hero-section h3 {
+    padding-top: 270px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+
+.hero-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 255, 0.048);
+}
+
+
+/* New Flexbox Layout for the cards */
+.custom-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensures all cards have the same height */
+  gap: 25px; /* Creates spacing between the cards */
+  flex-wrap: wrap; /* Allows cards to wrap to a new line on smaller screens */
+  
+}
+
+
+.services-card {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1 1 300px; /* Allows cards to grow, shrink, and have a base width of 300px */
+
+
+}
+
+.services-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.services-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #D4AF37; /* Subtle Gold Accent */
+  
+  
+}
+
+.services-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #36454F; /* Deep Charcoal Grey */
+  
+}
+
+/* Swiper container */
+.swiper {
+  width: 100%;
+  height: auto; /* Let it adjust naturally to the image */
+  padding-bottom: 20px; /* Space for arrows or pagination */
+}
+
+/* Each slide */
+.swiper-slide {
+  background:linear-gradient(#36454F); 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #000; */
+  padding: 10px;
+}
+
+/* Images inside Swiper */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Show the full outfit without cropping */
+  max-height: 500px; /* Prevent super tall images from stretching the page */
+  border-radius: 10px;
+}
+
+  .works-section {
+      padding: 50px 0;
+  }
+   
+   
+ .about-card {
+    margin-top: 50px;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+       
+ }
+
+.about-card h3 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #D4AF37;
+    font-family: sans-serif;
+    margin-left: 10px;
+    justify-self: center;
+    text-align: center;
+}
+
+
+.about-card p {
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     
+}
+
+
+.about-card img {
+    border-radius: 30px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    background-size: contain;
+     height: 100vh;  
+
+} 
+
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, #ff9a76, #D4AF37);
+  padding: 60px 20px;
+  color: white;
+   
+}
+
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* Contact Form */
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  height: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+/* Submit Button */
+.btn-submit {
+  background: white;
+  color: #ff6a3d;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #D4AF37;
+  color: black;
+}
+
+/* Image Styling */
+.contact-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+/* Make image & form same height on large screens */
+@media (min-width: 768px) {
+  .contact-section .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
+footer {
+  background-color:  #EAEAEA;
+  color: #D4AF37;
+  padding: 20px 10%;
+  text-align: center;
+  height: 30px;
+}
+
+
+
+/* =========================
+   MEDIA QUERIES
+   ========================= */
+
+/* For tablets and smaller laptops (max width 992px) */
+@media (max-width: 992px) {
+  .hero-section h3 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .services-card {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .about-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+/* For mobile phones (max width 768px) */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .hero-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .services-card {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .works-section p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .about-card {
+    text-align: center;
+  }
+
+  .about-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* For very small phones (max width 480px) */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .hero-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero-section p {
+    font-size: 0.85rem;
+  }
+
+  .services-card h3 {
+    font-size: 1rem;
+  }
+
+  .services-card p {
+    font-size: 0.8rem;
+  }
+
+  .works-section h3,
+  .about-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
