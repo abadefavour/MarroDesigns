@@ -488,12 +488,14 @@ footer {
 }
 
 
+
+
 /* Default styles remain the same */
 
 /* For small screens - make icons horizontal */
 @media (max-width: 768px) {
   .col-md-1 {
-    width: 100%;
+    width: 100% !important;
     display: flex;
     justify-content: center;
   }
