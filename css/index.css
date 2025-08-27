@@ -486,3 +486,61 @@ footer {
     text-align: center;
   }
 }
+
+
+/* Default styles: already included above */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .card {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .socialContainer {
+    width: 45px;
+    height: 45px;
+  }
+
+  .socialSvg {
+    width: 15px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .socialContainer {
+    width: 40px;
+    height: 40px;
+  }
+
+  .socialSvg {
+    width: 13px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .card {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .socialContainer {
+    width: 35px;
+    height: 35px;
+  }
+
+  .socialSvg {
+    width: 11px;
+  }
+}
