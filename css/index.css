@@ -488,19 +488,31 @@ footer {
 }
 
 
-/* Default styles: already included above */
+/* Default styles remain the same */
 
-/* For tablets and smaller screens */
+/* For small screens - make icons horizontal */
 @media (max-width: 768px) {
+  .col-md-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .card {
-    flex-wrap: wrap;
+    flex-direction: row;   /* Make them side by side */
+    justify-content: center;
+    align-items: center;
     gap: 15px;
-    padding: 20px;
+    padding: 15px;
+    width: 100%;
+    box-shadow: none;      /* Optional: remove heavy shadow for cleaner mobile look */
+    background-color: transparent; /* Optional: blend with background */
   }
 
   .socialContainer {
     width: 45px;
     height: 45px;
+    border-radius: 10px;  /* Slight rounding for a softer look */
   }
 
   .socialSvg {
@@ -508,14 +520,11 @@ footer {
   }
 }
 
-/* For mobile devices */
+/* Extra small screens (phones) */
 @media (max-width: 480px) {
   .card {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 15px;
-    gap: 12px;
+    gap: 10px;
+    padding: 10px;
   }
 
   .socialContainer {
@@ -525,22 +534,5 @@ footer {
 
   .socialSvg {
     width: 13px;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 320px) {
-  .card {
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .socialContainer {
-    width: 35px;
-    height: 35px;
-  }
-
-  .socialSvg {
-    width: 11px;
   }
 }
